@@ -8,6 +8,6 @@ public class Searching {
 	}
 	
 	public int countNumbers(long num, int start, int end) {
-		
+		return 0;
 	}
 }
