@@ -1,25 +1,31 @@
 package model;
 
+import java.util.List;
+
 public class Searching {
-	private long[] numbers;
+	private List<Integer> numbers;
 	private long num;
 	private int start;
 	private int end;
+	private int total;
 	
-	public Searching(long[] nums, long n, int s, int e) {
+	public Searching(List<Integer> nums, long n, int s, int e) {
 		numbers = nums;
 		num = n;
 		start = s;
 		end = e;
 	}
 	
-	public int countNumbers() {
-		int total = 0;
+	public void countNumbers() {
+		total = 0;
 		for (int i = start; i < end; i++) {
-			if(numbers[i]==num) {
+			if(numbers.get(i)==num) {
 				total++;
 			}
 		}
+	}
+	
+	public int getTotal() {
 		return total;
 	}
 }
